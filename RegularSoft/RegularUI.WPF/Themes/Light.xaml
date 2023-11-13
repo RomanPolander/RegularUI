@@ -1,0 +1,22 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="brush-primary" Color="#1B66B5"/>
+    <SolidColorBrush x:Key="brush-on-primary" Color="#FFFFFF"/>
+    
+    <SolidColorBrush x:Key="brush-surface-container-lowest" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="brush-surface-container-low" Color="#F2F5F7"/>
+    <SolidColorBrush x:Key="brush-surface-container" Color="#EDEFF1"/>
+    <SolidColorBrush x:Key="brush-surface-container-high" Color="#E7E9EC"/>
+    <SolidColorBrush x:Key="brush-surface-container-highest" Color="#E2E4E6"/>
+
+    <SolidColorBrush x:Key="brush-text-01" Color="#1B1D1F"/>
+    <SolidColorBrush x:Key="brush-text-02" Color="#444A4F"/>
+    
+    <SolidColorBrush x:Key="brush-border-01" Color="#747A80"/>
+    <SolidColorBrush x:Key="brush-border-02" Color="#C5CBD1"/>
+
+    <SolidColorBrush x:Key="brush-focus-inside" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="brush-focus-outside" Color="#1B66B5"/>
+    
+</ResourceDictionary>

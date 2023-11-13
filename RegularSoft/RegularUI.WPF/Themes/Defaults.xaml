@@ -1,0 +1,20 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/RegularUI.WPF;component/Themes/Font.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/RegularUI.WPF;component/Themes/GridSplitter.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/RegularUI.WPF;component/Themes/GroupBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/RegularUI.WPF;component/Themes/ListView.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/RegularUI.WPF;component/Themes/Menu.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/RegularUI.WPF;component/Themes/ProgressBar.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style TargetType="{x:Type GridSplitter}" BasedOn="{StaticResource grid-splitter-default}"/>
+    <Style TargetType="{x:Type GroupBox}" BasedOn="{StaticResource group-box-default}"/>
+    <Style TargetType="{x:Type ListView}" BasedOn="{StaticResource list-view-default}"/>
+    <Style TargetType="{x:Type Menu}" BasedOn="{StaticResource menu-default}"/>
+    <Style TargetType="{x:Type ProgressBar}" BasedOn="{StaticResource progress-bar-default}"/>
+    <Style TargetType="{x:Type Separator}" BasedOn="{StaticResource separator-default}"/>
+
+</ResourceDictionary>

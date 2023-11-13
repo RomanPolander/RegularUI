@@ -1,0 +1,302 @@
+﻿<Window x:Class="RegularSoft.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RegularSoft"
+        mc:Ignorable="d"
+        
+        xmlns:regularUI="clr-namespace:RegularUI.WPF;assembly=RegularUI.WPF"
+        
+        WindowStartupLocation="CenterScreen"
+        
+        xmlns:collections="clr-namespace:System.Collections;assembly=mscorlib"
+        
+        Title="MainWindow" 
+        Height="920" Width="1200"
+        d:Height="5200">
+    <Grid Background="{DynamicResource brush-surface-container-lowest}">
+        <ScrollViewer>
+            <StackPanel Margin="64">
+                <TextBlock Style="{StaticResource Heading-1}"
+                           Margin="0 64 0 0">
+                    Разделитель сетки / Grid splitter
+                </TextBlock>
+                <TextBlock Style="{StaticResource Body-1}"
+                           Margin="0 24 0 0"
+                           MaxWidth="500">
+                    Разделитель сетки плзволяет изменять размеры отдельных ячеек при помощи
+                    перетаскивания курсора мыши. Слева разделитель без предварительного просмотра. 
+                    Справа разделитель с предварительным просмотром.
+                </TextBlock>
+                <Border Background="{DynamicResource brush-surface-container}"
+                        BorderBrush="{DynamicResource brush-border-02}"
+                        BorderThickness="1"
+                        Margin="0 24 0 0"
+                        Height="256"
+                        Width="512"
+                        HorizontalAlignment="Left">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0"
+                              Background="{DynamicResource brush-surface-container-lowest}"
+                              Margin="0"/>
+                        <GridSplitter Grid.Column="0"
+                                      HorizontalAlignment="Right"
+                                      Margin="0"
+                                      Width="2"/>
+                        <Grid Grid.Column="1"
+                              Background="{DynamicResource brush-surface-container-lowest}"
+                              Margin="0"/>
+                        <GridSplitter Grid.Column="1"
+                                      HorizontalAlignment="Right"
+                                      Margin="0"
+                                      ShowsPreview="True"
+                                      Width="2"/>
+                        <Grid Grid.Column="2"
+                              Background="{DynamicResource brush-surface-container-lowest}"
+                              Margin="0"/>
+                    </Grid>
+                </Border>
+
+                <TextBlock Style="{StaticResource Heading-1}"
+                           Margin="0 64 0 0">
+                    Групповой контейнер / Group box               
+                </TextBlock>
+                <TextBlock Style="{StaticResource Body-1}"
+                           Margin="0 24 0 0"
+                           MaxWidth="500">
+                    Ниже представлены два вида груповых контейнеров. Верхний ряд это стандартный стиль, по сути представляет из себя 
+                    лишь заголовок с отступом от контента в 8 dp. 
+                    <LineBreak/>
+                    <LineBreak/>
+                    Нижний ряд группа в виде так называемой плитки,
+                    не интерактивна, за исключением элементов внутри группы. Как и предыдущий
+                    стиль состоит из заголока, но, помимо него, имеется задний фон и отступ от
+                    краев в 16 dp.
+                    
+                </TextBlock>
+
+                <StackPanel Orientation="Horizontal"
+                            Margin="0 24">
+                    <GroupBox Header="Группа флаговых кнопок">
+                        <StackPanel >
+                            <CheckBox Content="Флаговая кнопка 1"/>
+                            <CheckBox Content="Флаговая кнопка 2" Margin="0 8 0 0"/>
+                            <CheckBox Content="Флаговая кнопка 3" Margin="0 8 0 0"/>
+                        </StackPanel>
+                    </GroupBox>
+
+                    <GroupBox Header="Группа флаговых кнопок"
+                              Margin="24 0 0 0">
+                        <StackPanel>
+                            <RadioButton Content="Флаговая кнопка 1"/>
+                            <RadioButton Content="Флаговая кнопка 2" Margin="0 8 0 0"/>
+                            <RadioButton Content="Флаговая кнопка 3" Margin="0 8 0 0"/>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal"
+                            Margin="0 24">
+                    <GroupBox Header="Группа флаговых кнопок"
+                              Style="{StaticResource group-box-tile}"
+                              Width="240"
+                              Padding="0">
+                        <StackPanel >
+                            <TextBlock Style="{StaticResource Body-1}"
+                                       Margin="16 16 16 0">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla scelerisque, 
+                                lacus sit amet mattis pretium, enim dolor blandit augue, nec 
+                                elementum lectus eros eu arcu. 
+                            </TextBlock>
+                            <CheckBox Content="Флаговая кнопка 1" Margin="16 16 16 0"/>
+                            <CheckBox Content="Флаговая кнопка 2" Margin="16 8 16 0"/>
+                            <Button HorizontalAlignment="Right"
+                                    Content="+"
+                                    Margin="16 24 0 0"/>
+                        </StackPanel>
+                    </GroupBox>
+
+                    <GroupBox Header="Группа флаговых кнопок"
+                              Style="{StaticResource group-box-tile}"
+                              Margin="24 0 0 0"
+                              Width="240"
+                              Padding="0">
+                        <StackPanel>
+                            <TextBlock Style="{StaticResource Body-1}"
+                                        Margin="16 16 16 0">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla scelerisque, 
+                                lacus sit amet mattis pretium, enim dolor blandit augue, nec 
+                                elementum lectus eros eu arcu.
+                            </TextBlock>
+                            <RadioButton Content="Флаговая кнопка 1"  Margin="16 16 16 0"/>
+                            <RadioButton Content="Флаговая кнопка 2"  Margin="16 8 16 0"/>
+                            <Button HorizontalAlignment="Right"
+                                    Content="+"
+                                    Margin="0 24 0 0"/>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+
+                <TextBlock Style="{StaticResource Heading-1}"
+                           Margin="0 64 0 0">
+                    Список (какой-то там) / List view
+                </TextBlock>
+                <TextBlock Style="{StaticResource Body-1}"
+                           Margin="0 24 0 0"
+                           MaxWidth="500">
+                    Ниже представлены структурированный cписок, позволяющий перетаскивать колонки
+                    с помощью мыши (стиль колонок в режиме перетаскивания пока не доведен до ума).
+                </TextBlock>
+
+                <ListView Margin="0 24 0 0"
+                          ItemsSource="{DynamicResource ResourceKey=phones}"
+                          HorizontalAlignment="Left"
+                          Width="512">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=Id}">Id</GridViewColumn>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Width="100">Параметр</GridViewColumn>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=Value}">Значение</GridViewColumn>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=IsEnabled}">Доступен</GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                    <ListView.Resources>
+                        <collections:ArrayList x:Key="phones">
+                            <local:SomeDataClass Id="0" Name="INT_32" Value="5490" IsEnabled="True"/>
+                            <local:SomeDataClass Id="1" Name="INT_32" Value="101" IsEnabled="True"/>
+                            <local:SomeDataClass Id="2" Name="PASSWORD" Value="777777" IsEnabled="True"/>
+                            <local:SomeDataClass Id="3" Name="BOOLEAN" Value="True" IsEnabled="True"/>
+                        </collections:ArrayList>
+                    </ListView.Resources>
+                </ListView>
+
+                <TextBlock Style="{StaticResource Heading-1}"
+                           Margin="0 64 0 0">
+                    Меню / Menu
+                </TextBlock>
+                <TextBlock Style="{StaticResource Body-1}"
+                           Margin="0 24 0 0"
+                           MaxWidth="500">
+                    Стандартное меню. Для элементов самого высокого уровня можно отдельно задать 
+                    высоту (сейчас установлена 48 dp ).
+                </TextBlock>
+
+                <Menu Margin="0 24 0 0" Width="512"
+                      HorizontalAlignment="Left">
+                    <MenuItem Header="Файл" >
+                        <MenuItem Header="Сохранить"  Icon="{regularUI:PackIcon Kind=None}"/>
+
+                        <MenuItem Header="Сохранить как.." />
+
+                        <MenuItem Header="Выход"
+                                  InputGestureText="Ctrl+E" />
+                        <Separator />
+
+                        <MenuItem Header="Включить"
+                                  IsCheckable="True"
+                                  IsChecked="True" />
+
+                        <MenuItem Header="Отметить" IsCheckable="True" />
+
+                        <Separator />
+                        <MenuItem Header="Дальше лучше" InputGestureText="Ctrl+D">
+                            <MenuItem Header="Что-то 1" IsCheckable="True" />
+                            <MenuItem Header="Что-то 2" IsCheckable="True" />
+                        </MenuItem>
+
+                        <MenuItem Header="Заключительное" InputGestureText="Ctrl+D">
+                            <MenuItem Header="Один" />
+                            <MenuItem Header="Три" />
+                        </MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="Опция 1"></MenuItem>
+                    <MenuItem Header="Опция 2"></MenuItem>
+                    <MenuItem Header="Опция 3"></MenuItem>
+                </Menu>
+
+                <TextBlock Style="{StaticResource Body-1}"
+                           Margin="0 24 0 0"
+                           MaxWidth="500">
+                   Здесь высота установлена в 30 dp, а также для первого элемента задан цветной фон.
+                </TextBlock>
+                <Menu Margin="0 24 0 0" Width="512"
+                      HorizontalAlignment="Left" regularUI:MenuAssist.TopLevelMenuItemHeight="30">
+                    <MenuItem Header="Файл" regularUI:MenuAssist.IsColored="True">
+                        <MenuItem Header="Сохранить"  Icon="{regularUI:PackIcon Kind=None}"/>
+
+                        <MenuItem Header="Сохранить как.." />
+
+                        <MenuItem Header="Выход"
+                                  InputGestureText="Ctrl+E" />
+                        <Separator />
+
+                        <MenuItem Header="Включить"
+                                  IsCheckable="True"
+                                  IsChecked="True" />
+
+                        <MenuItem Header="Отметить" IsCheckable="True" />
+
+                        <Separator />
+                        <MenuItem Header="Дальше лучше" InputGestureText="Ctrl+D">
+                            <MenuItem Header="Что-то 1" IsCheckable="True" />
+                            <MenuItem Header="Что-то 2" IsCheckable="True" />
+                        </MenuItem>
+
+                        <MenuItem Header="Заключительное" InputGestureText="Ctrl+D">
+                            <MenuItem Header="Один" />
+                            <MenuItem Header="Три" />
+                        </MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="Опция 1"></MenuItem>
+                    <MenuItem Header="Опция 2"></MenuItem>
+                    <MenuItem Header="Опция 3"></MenuItem>
+                </Menu>
+
+
+                <TextBlock Style="{StaticResource Heading-1}"
+                           Margin="0 64 0 0">
+                    Шкала прогресса / Progress bar
+                </TextBlock>
+                <TextBlock Style="{StaticResource Body-1}"
+                           Margin="0 24 0 0"
+                           MaxWidth="500">
+                   Ниже размещены линейные шкалы прогресса, от стандартной шкалы из коробки
+                    WPF отличается только цветами.
+                </TextBlock>
+
+                <StackPanel Margin="0 24 0 0">
+                    <ProgressBar Width="512" HorizontalAlignment="Left" Value="25" Height="2"/>
+                    <ProgressBar Width="512" HorizontalAlignment="Left" Margin="0 24 0 0" Value="75" Height="2"/>
+                    <ProgressBar Width="512" HorizontalAlignment="Left" Margin="0 24 0 0" Value="25" Height="2" IsIndeterminate="True"/>
+                </StackPanel>
+
+                <TextBlock Style="{StaticResource Body-1}"
+                           Margin="0 24 0 0"
+                           MaxWidth="500">
+                   Круговые шкалы прогресса. Первый заполнен на 25%, второй - на 75%.
+                </TextBlock>
+                
+                <StackPanel Margin="0 24 0 0"
+                            Orientation="Horizontal">
+                    <ProgressBar  HorizontalAlignment="Left" 
+                                  Style="{StaticResource progress-bar-circular}" 
+                                  IsIndeterminate="True"
+                                  Value="25" 
+                                  Height="2"/>
+                    <ProgressBar  HorizontalAlignment="Left" 
+                                  Style="{StaticResource progress-bar-circular}" 
+                                  IsIndeterminate="True"
+                                  Value="75" 
+                                  Height="2"
+                                  Margin="16 0 0 0"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
