@@ -3,13 +3,16 @@
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="pack://application:,,,/RegularUI.WPF;component/Themes/Font.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/RegularUI.WPF;component/Themes/Button.xaml" />
         <ResourceDictionary Source="pack://application:,,,/RegularUI.WPF;component/Themes/GridSplitter.xaml" />
         <ResourceDictionary Source="pack://application:,,,/RegularUI.WPF;component/Themes/GroupBox.xaml" />
         <ResourceDictionary Source="pack://application:,,,/RegularUI.WPF;component/Themes/ListView.xaml" />
         <ResourceDictionary Source="pack://application:,,,/RegularUI.WPF;component/Themes/Menu.xaml" />
         <ResourceDictionary Source="pack://application:,,,/RegularUI.WPF;component/Themes/ProgressBar.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/RegularUI.WPF;component/Themes/TextBlock.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
+    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource button-primary-default}"/>
     <Style TargetType="{x:Type GridSplitter}" BasedOn="{StaticResource grid-splitter-default}"/>
     <Style TargetType="{x:Type GroupBox}" BasedOn="{StaticResource group-box-default}"/>
     <Style TargetType="{x:Type ListView}" BasedOn="{StaticResource list-view-default}"/>

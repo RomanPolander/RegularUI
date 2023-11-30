@@ -2,6 +2,9 @@
 {
     public enum PackIconKind
     {
+        EyeOn,
+        GitHub,
         None,
+        Plus,
     }
 }

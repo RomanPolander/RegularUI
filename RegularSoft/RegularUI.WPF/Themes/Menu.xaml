@@ -277,7 +277,7 @@
         <Setter Property="Background" Value="{DynamicResource brush-surface-container-highest}" />
         <Setter Property="BorderBrush" Value="{DynamicResource brush-border-02}" />
         <Setter Property="BorderThickness" Value="0 0 0 1" />
-        <Setter Property="FontFamily" Value="{DynamicResource font-default}" />
+        <!--<Setter Property="FontFamily" Value="{DynamicResource font-default}" />-->
         <Setter Property="Foreground" Value="{DynamicResource brush-text-01}" />
         <Setter Property="Template">
             <Setter.Value>

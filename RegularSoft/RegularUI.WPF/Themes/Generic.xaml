@@ -5,7 +5,7 @@
 
     <Style TargetType="{x:Type local:PackIcon}">
         <Setter Property="FlowDirection" Value="LeftToRight" />
-        <Setter Property="Background" Value="{DynamicResource brush-text-02}"/>
+        <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Height" Value="16" />
         <Setter Property="HorizontalAlignment" Value="Left" />
         <Setter Property="IsTabStop" Value="False" />
@@ -13,14 +13,13 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:PackIcon}">
                     <Border Background="{TemplateBinding Background}"
-                  BorderBrush="{TemplateBinding BorderBrush}"
-                  BorderThickness="{TemplateBinding BorderThickness}"
-                            Margin="2">
-                        <!--<Viewbox FlowDirection="{TemplateBinding FlowDirection}">
-                            <Canvas Width="24" Height="24">
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <Viewbox FlowDirection="{TemplateBinding FlowDirection}">
+                            <Canvas Width="{TemplateBinding Width}" Height="{TemplateBinding Height}">
                                 <Path Data="{Binding Data, RelativeSource={RelativeSource TemplatedParent}}" Fill="{TemplateBinding Foreground}" />
                             </Canvas>
-                        </Viewbox>-->
+                        </Viewbox>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>

@@ -3,7 +3,7 @@ using System.Windows.Markup;
 
 namespace RegularUI.WPF
 {
-    //[MarkupExtensionReturnType(typeof(PackIcon))]
+    [MarkupExtensionReturnType(typeof(PackIcon))]
     public class PackIconExtension : MarkupExtension
     {
         public PackIconExtension()
